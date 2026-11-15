@@ -24,7 +24,7 @@ npm run preview
 
 ## GitHub Pages hosting
 
-Deployment targets [bondo2-1.github.io](https://bondo2-1.github.io) in the public [Bondo2-1.github.io repository](https://github.com/Bondo2-1/Bondo2-1.github.io). Initial publication is in progress. GitHub Pages and standard GitHub Actions runners are free for public repositories.
+The portfolio is live at [bondo2-1.github.io](https://bondo2-1.github.io), hosted from the public [Bondo2-1.github.io repository](https://github.com/Bondo2-1/Bondo2-1.github.io). GitHub Pages and standard GitHub Actions runners are free for public repositories.
 
 Push changes to `main` to run `.github/workflows/deploy.yml`. The workflow installs locked dependencies with Node.js 22, runs lint and TypeScript checks, prepares assets, builds the static export, and deploys `out/`. You can also run it manually from the repository's Actions tab. In Settings → Pages, the publishing source must remain **GitHub Actions**.
 

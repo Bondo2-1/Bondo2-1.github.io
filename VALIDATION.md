@@ -2,13 +2,15 @@ GATE: OFF (no build active)
 
 # Portfolio validation
 
-## GitHub Pages preparation — 15 November 2026
+## GitHub Pages deployment — 15 November 2026
 
-Prepared `.github/workflows/deploy.yml` for a public `Bondo2-1/Bondo2-1.github.io` user site. The workflow uses Node.js 22, locked npm dependencies, lint, TypeScript checks, static export, and GitHub's Pages actions pinned to verified release commits. Canonical and social metadata now target `https://bondo2-1.github.io`. Source originals remain intact; generated outputs, browser profiles, environment files, and local QA artifacts are excluded from Git.
+Published [bondo2-1.github.io](https://bondo2-1.github.io/) from the public [Bondo2-1.github.io repository](https://github.com/Bondo2-1/Bondo2-1.github.io). `.github/workflows/deploy.yml` uses Node.js 22, locked npm dependencies, lint, TypeScript checks, static export, and GitHub's Pages actions pinned to verified release commits. Pages uses the Actions publishing source with HTTPS enforced. Pushes to `main` deploy automatically. Canonical and social metadata target the production domain.
 
-Lint, TypeScript, and production build passed. All 28 root-relative export links checked exist locally; the canonical and social-image URLs point to the intended domain. A credential-pattern scan found no matches in staged text files. The local publication inventory is `.taste-skill/publication-scope.json`: 99 files, approximately 29.58 MB, including source, artwork/references, prompts, and the unchanged résumé.
+Lint, TypeScript, and production build passed locally and in the [successful production workflow](https://github.com/Bondo2-1/Bondo2-1.github.io/actions/runs/43719110359). All 28 root-relative export links checked exist locally. Live verification returned HTTPS 200 for the homepage and all 40 checked assets. Contact links, lowercase branding, canonical URL, and social-image URL are correct. The downloaded résumé is byte-identical to the original; SHA-256: `7b06e6014387a820c1f24e395ced82ea4f1c7648dd42f1134fcdf9204ebc215d`.
 
-The user subsequently approved public source code, artwork/reference images, and the original résumé PDF. Generation prompts and internal review records are excluded from Git while remaining intact locally. Publication is in progress; online verification will be recorded after deployment.
+Captured and inspected the live site at 1440 × 900 and 320 × 640. The capture runner reported no horizontal overflow. The Next.js development indicator is absent in both screenshots and production HTML. Captures are retained locally as `shots/github-pages-1440.png` and `shots/github-pages-320.png`; the HTTP report is `.taste-skill/github-pages-live.json`.
+
+The approved publication contains 82 files: source code, artwork/reference images, fonts, the original taste kit, and the unchanged résumé PDF. Generation prompts and internal review records remain intact locally and are excluded from Git; the complete remote file tree confirms their absence. Generated outputs, browser profiles, environment files, screenshots, and local QA reports are also ignored. A credential-pattern scan found no matches in staged text files. The publication inventory is `.taste-skill/publication-scope.json`. Prior design-audit limitations remain recorded below; this deployment did not change the interface.
 
 ## Hero name and headline grouping — 15 November 2026
 
