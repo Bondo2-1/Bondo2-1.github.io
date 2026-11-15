@@ -1,0 +1,134 @@
+{
+  "generator": "Built-in OpenAI image_gen",
+  "created": "2026-11-14",
+  "updated": "2026-11-15",
+  "style": "Tactile editorial 3D; concrete, wood, matte black, mint, yellow; transparent backgrounds.",
+  "brands": [
+    {
+      "id": "n8n",
+      "source": "https://guidelines.n8n.design/downloads/logo/lockup/n8n-logo-black-accent.svg",
+      "original": "brands/n8n-logo.svg",
+      "output": "/assets/brands/n8n-logo.svg",
+      "retrieved": "2026-11-15",
+      "usage": "Official new n8n logo for light surfaces; retained from the first hero robot."
+    },
+    {
+      "id": "n8n-on-dark",
+      "source": "https://guidelines.n8n.design/downloads/logo/lockup/n8n-logo-white-accent.svg",
+      "original": "brands/n8n-logo-white-accent.svg",
+      "output": "/assets/brands/n8n-logo-white-accent.svg",
+      "retrieved": "2026-11-15",
+      "usage": "Official white-and-pink n8n logo for the new charcoal hoodie."
+    }
+  ],
+  "illustrations": [
+    {
+      "id": "automation-card-player",
+      "original": "illustrations/automation-card-player.png",
+      "prompt": "prompts/automation-card-player.md",
+      "output": "/assets/illustrations/automation-card-player-{480,560,800,960}.webp",
+      "widths": [480, 560, 800, 960],
+      "conceptual": true,
+      "reference": "reviews/experience-concepts/references/character.png",
+      "preserveCanvas": true,
+      "animationLayerData": "layers/experience-art.json",
+      "usage": "Approved United Elite illustration. Only the three floating logo cards move; the character and held cards stay still."
+    },
+    {
+      "id": "sales-bank-comparison",
+      "original": "illustrations/sales-bank-comparison.png",
+      "prompt": "prompts/sales-bank-comparison.md",
+      "output": "/assets/illustrations/sales-bank-comparison-{480,560,800,960}.webp",
+      "widths": [480, 560, 800, 960],
+      "conceptual": true,
+      "reference": "reviews/experience-concepts/references/bank-comparison-form.png",
+      "preserveCanvas": true,
+      "animationLayerData": "layers/experience-art.json",
+      "usage": "Approved bank comparison illustration. Only the thought cloud and its bank names move; the saleswoman, form and desk stay still."
+    },
+    {
+      "id": "hero-n8n-robot",
+      "original": "illustrations/hero-n8n-robot-v2.png",
+      "prompt": "prompts/hero-n8n-robot-v2.md",
+      "output": "/assets/illustrations/hero-n8n-robot-{640,1200}.webp",
+      "conceptual": true,
+      "reference": "illustrations/hero-n8n-robot.png",
+      "usage": "Hero character; HTML eyes animate independently and the official n8n logo is overlaid on the hoodie.",
+      "preserveCanvas": true,
+      "style": "Smooth head, no hair, glasses or facial hair; charcoal hoodie with pink details and off-white robot shell. The complete transparent canvas is retained for eye and logo coordinates."
+    },
+    {
+      "id": "hero-n8n-robot-v1",
+      "original": "illustrations/hero-n8n-robot.png",
+      "prompt": "prompts/hero-n8n-robot.md",
+      "output": "/assets/illustrations/hero-n8n-robot-v1-{640,1200}.webp",
+      "conceptual": true,
+      "reference": "references/hero-robot-reference.png",
+      "preserveCanvas": true,
+      "usage": "Archived first hero robot with hair, glasses, and an orange hoodie; replaced by the smooth-head charcoal version."
+    },
+    {
+      "id": "automation-systems",
+      "usage": "Retained original About illustration and material reference; replaced on the page by about-docker-engineer.",
+      "original": "illustrations/automation-systems.png",
+      "prompt": "prompts/automation-systems.md",
+      "output": "/assets/illustrations/automation-systems-{640,1200}.webp",
+      "conceptual": true,
+      "reference": null
+    },
+    {
+      "id": "united-elite-operations",
+      "usage": "Archived original United Elite processing illustration; replaced by the approved card-player and bank-comparison artwork.",
+      "original": "illustrations/united-elite-operations.png",
+      "prompt": "prompts/united-elite-operations.md",
+      "output": "/assets/illustrations/united-elite-operations-{640,1200}.webp",
+      "conceptual": true,
+      "reference": "automation-systems"
+    },
+    {
+      "id": "sdn-container-support",
+      "original": "illustrations/sdn-office-developer.png",
+      "prompt": "prompts/sdn-office-developer.md",
+      "output": "/assets/illustrations/sdn-container-support-{640,1200}.webp",
+      "conceptual": true,
+      "reference": "reviews/sdn-office-concept/reference-character.png",
+      "preserveCanvas": true,
+      "usage": "Approved seated developer with a development-symbol hoodie, PostgreSQL production administration, Docker Swarm updates, and backend API logs. Image-only replacement; existing SDN text and layout preserved."
+    },
+    {
+      "id": "sdn-container-support-original",
+      "original": "illustrations/sdn-container-support.png",
+      "prompt": "prompts/sdn-container-support.md",
+      "output": "/assets/illustrations/sdn-container-support-original-{640,1200}.webp",
+      "conceptual": true,
+      "reference": "automation-systems",
+      "usage": "Archived original container/database illustration, replaced by the approved office developer."
+    },
+    {
+      "id": "hirehustle-ranking",
+      "original": "illustrations/hirehustle-ranking.png",
+      "prompt": "prompts/hirehustle-ranking.md",
+      "output": "/assets/illustrations/hirehustle-ranking-{640,1200}.webp",
+      "conceptual": true,
+      "reference": "automation-systems"
+    },
+    {
+      "id": "about-docker-engineer",
+      "original": "illustrations/about-docker-engineer.png",
+      "prompt": "prompts/about-docker-engineer.md",
+      "output": "/assets/illustrations/about-docker-engineer-{640,1200}.webp",
+      "conceptual": true,
+      "reference": "references/about-character-reference.png",
+      "style": "User-requested standing stylized 3D character with Docker-branded clothing; transparent background.",
+      "usage": "About section"
+    },
+    {
+      "id": "commerce-api",
+      "original": "illustrations/commerce-api.png",
+      "prompt": "prompts/commerce-api.md",
+      "output": "/assets/illustrations/commerce-api-{640,1200}.webp",
+      "conceptual": true,
+      "reference": "automation-systems"
+    }
+  ]
+}

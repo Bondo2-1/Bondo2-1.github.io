@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+public/assets/
+shots/
+.taste-skill/*
+!.taste-skill/plan.md
+!.taste-skill/waivers.json
+*.tsbuildinfo
+.env*
+!.env.example
+npm-debug.log*
+assets/reviews/**/references/*-brand.html
+assets/references/*.html
+assets/prompts/
+assets/reviews/**/*.md
+assets/reviews/**/*.json

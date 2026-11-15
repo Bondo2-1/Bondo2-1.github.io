@@ -1,0 +1,27 @@
+[
+  {
+    "check": "no-visual",
+    "target": "section#skills",
+    "reason": "The approved plan specifies categorized text skills with small Phosphor interface glyphs, rather than a large picture or a product mockup."
+  },
+  {
+    "check": "button-styles",
+    "target": "(the page)",
+    "reason": "The approved light editorial design has a black primary button on light surfaces and the same button inverted on the black footer, plus one outlined secondary style."
+  },
+  {
+    "check": "copy-headings",
+    "target": "HIREHUSTLE",
+    "reason": "HireHustle and the employer headings are actual names from the supplied resume. Their adjacent category and role text supplies context; names must not be replaced with invented generic product claims."
+  },
+  {
+    "check": "heading-scale",
+    "target": "HIREHUSTLE",
+    "reason": "Project and employer titles use the approved condensed display face; skill group and education subheadings use the smaller body face. Each content role has a consistent size, with no heading inversion."
+  },
+  {
+    "check": "container-edges",
+    "target": "header.nav.nav--centre",
+    "reason": "The supplied design explicitly requires a padded white navigation pill. Its outer left and right edges align with every section; its controls intentionally sit inside its padding."
+  }
+]
