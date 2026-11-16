@@ -2,6 +2,18 @@ GATE: OFF (no build active)
 
 # Portfolio validation
 
+## Hero button/contact spacing — 16 November 2026
+
+Reproduced the reported overlap at 1472 × 734, corresponding to the supplied desktop screenshot at display scaling. The fixed-height hero allowed its main grid to shrink below its content height. The hero now retains intrinsic content height, reserves 40px above desktop contacts (32px on short windows), and scales the heading with window height below 801px. The robot's height allowance also reserves space for those contacts. Very short windows scroll the complete hero instead of overlapping the location and phone. Résumé facts, links, original artwork, and animation behavior are unchanged.
+
+Lint, TypeScript, and the production build passed. Captured and inspected desktop, tablet, and phone layouts at 1440 × 900, 1472 × 734, 1366 × 768, 1440 × 720, 1280 × 600, 1024 × 768, 820 × 1180, 768 × 1024, 390 × 844, and 320 × 640. Reduced-motion content remains visible. Final measurements show a 900px hero at 1440 × 900 and a 734px hero at 1472 × 734; both have their buttons fully in view. At 1280 × 600 the hero grows to 688px, with buttons ending at 572px and contacts accessible by scrolling. No page errors were reported.
+
+The final desktop consistency check passes `hero-screen`, `overlap-text`, `cut-text`, and `nav-covers`. The three-width run passes `collide`, `off-viewport`, and `tap-size`, including 320px. Copy lint: **420 words, 0 FAIL, 0 WARN**. Performance: **0 FAIL, 6 WARN**, with no broken requests or layout shift; existing warnings concern JavaScript size, the three approved fonts, and image dimensions. The social preview was refreshed from the final desktop hero.
+
+The raw final desktop audit still reports **21 FAIL, 19 WARN** across existing design choices and prior findings: text-only skills, button variants, heading naming/scale, the confirmed phone number, footer email focus detection, content-height footer rhythm, container padding, and unequal/centered hero columns. The three-width audit reported **31 FAIL, 40 WARN** before the final artwork-height adjustment; its temporary 7px desktop hero overrun was corrected and the final hero-screen check passes. Broader design findings remain outside this hero-spacing change. Layout findings retain the approved growing phone sections, About content height, and compact footer. Narrow `hero-fold` and `hero-maxchars` waivers now document the short-window fallback in `.taste-skill/waivers.json`; kit files remain untouched.
+
+`GATE: OFF (no build active)` was recorded once and was not rearmed. Detailed local reports and screenshots use the `.taste-skill/hero-spacing-*` and `shots/hero-spacing-*` prefixes. The [production deployment](https://github.com/Bondo2-1/Bondo2-1.github.io/actions/runs/43848356087) passed. Live HTTPS verification returns 200 for the homepage and all 40 checked assets. The deployed height-aware heading and optimized robot sizing match the tested local build, and the résumé still matches its original SHA-256. The live desktop capture is `shots/hero-spacing-live-1472.png`; the HTTP report is `.taste-skill/hero-spacing-live.json`.
+
 ## GitHub Pages deployment — 15 November 2026
 
 Published [bondo2-1.github.io](https://bondo2-1.github.io/) from the public [Bondo2-1.github.io repository](https://github.com/Bondo2-1/Bondo2-1.github.io). `.github/workflows/deploy.yml` uses Node.js 22, locked npm dependencies, lint, TypeScript checks, static export, and GitHub's Pages actions pinned to verified release commits. Pages uses the Actions publishing source with HTTPS enforced. Pushes to `main` deploy automatically. Canonical and social metadata target the production domain.
