@@ -4,6 +4,8 @@ Client direction: warm-gray editorial palette, Anton + Inter + IBM Plex Mono, ed
 ## Screens at 1440 × 900
 
 - Hero: role, location, phone, résumé download, projects anchor; editorial type beside a generated clean-shaven robot with an official n8n logo. The lowercase navbar wordmark remains; the title-case personal name sits directly above the role headline with a 20px desktop / 16px phone gap. Desktop metadata stays aligned on the right; its empty row is removed on smaller screens. One desktop screen; phone content grows. User-requested changes on 15 November 2026 supersede the initial text-only hero.
+
+Desktop spacing update, 16 November 2026: preserve the hero content's intrinsic height and reserve 40px above the contact row (32px below 801px window height). Short desktop windows cap headline size at 11svh; when content still cannot fit, the hero grows beyond the viewport instead of overlapping the location or phone. Normal desktop views retain a full-screen hero. Phone typography and artwork remain unchanged.
 - Projects: HireHustle matching and commerce API; two distinct generated conceptual illustrations; 2 screens.
 - Experience: United Elite role details with the approved card-playing developer, then its approved sales/bank-comparison illustration on a separate row; 2 screens. Three logo cards and the bank cloud drift slowly; characters and form stay still.
 - Earlier experience: the SDN support role with its approved seated office developer showing PostgreSQL, Docker Swarm updates, and API logs; image-only replacement on 15 November 2026. Existing role text and layout are preserved. One desktop screen, growing with stacked content on smaller viewports.

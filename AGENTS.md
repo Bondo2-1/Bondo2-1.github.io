@@ -32,6 +32,8 @@ Keep the warm-gray palette, Anton headings, Inter body, IBM Plex Mono metadata, 
 
 Keep `m.abdelmaqsooud` lowercase; group the hero name immediately above the role headline.
 
+Reserve 32–40px above desktop hero contacts. Let the hero grow in short windows instead of shrinking content into the contact row.
+
 The hero robot blinks every two seconds and follows fine pointers; its pause button was removed. Experience artwork uses [SVG masks](assets/layers/experience-art.json): float only the three logo cards and bank cloud over 6.5–8 seconds. Keep figures, held cards, and form still. Preserve complete canvases. Honor reduced motion and suspend loops offscreen or in hidden tabs.
 
 Use native smooth scrolling for section links, with instant scrolling under reduced motion.
