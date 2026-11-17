@@ -1,7 +1,6 @@
 const heroCode = document.querySelector(".hero-code");
-const codeToggle = document.querySelector(".hero-code-toggle");
 
-if (heroCode && codeToggle && typeof heroCode.animate === "function" && "IntersectionObserver" in window) {
+if (heroCode && typeof heroCode.animate === "function" && "IntersectionObserver" in window) {
   const reducedCodeMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const codeRows = [...heroCode.querySelectorAll("code > span")];
   const typingStart = 280;
@@ -12,7 +11,6 @@ if (heroCode && codeToggle && typeof heroCode.animate === "function" && "Interse
   const cycleDuration = fadeStart + 400;
   let animations = [];
   let inView = false;
-  let pausedByUser = false;
 
   const startCodeLoop = () => {
     const timing = { duration: cycleDuration, iterations: Infinity };
@@ -34,14 +32,13 @@ if (heroCode && codeToggle && typeof heroCode.animate === "function" && "Interse
 
   const syncCodeLoop = () => {
     const still = reducedCodeMotion.matches || document.documentElement.dataset.motion === "off";
-    codeToggle.hidden = still;
     if (still) {
       animations.forEach((animation) => animation.cancel());
       animations = [];
       return;
     }
 
-    const running = inView && !document.hidden && !pausedByUser;
+    const running = inView && !document.hidden;
     if (running && !animations.length) startCodeLoop();
     animations.forEach((animation) => {
       if (running && animation.playState === "paused") animation.play();
@@ -49,12 +46,6 @@ if (heroCode && codeToggle && typeof heroCode.animate === "function" && "Interse
     });
   };
 
-  codeToggle.addEventListener("click", () => {
-    pausedByUser = !pausedByUser;
-    codeToggle.setAttribute("aria-pressed", String(pausedByUser));
-    codeToggle.title = pausedByUser ? "Resume background typing" : "Pause background typing";
-    syncCodeLoop();
-  });
   new IntersectionObserver(([entry]) => {
     inView = entry.isIntersecting;
     syncCodeLoop();
