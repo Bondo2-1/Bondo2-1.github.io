@@ -5,6 +5,7 @@ import {
 } from "@phosphor-icons/react/ssr";
 import { Navigation } from "@/components/navigation";
 import { Illustration } from "@/components/illustration";
+import { HeroCodeBackground } from "@/components/hero-code-background";
 import { HeroMascot } from "@/components/hero-mascot";
 import { about, bankComparison, experience, profile, projects, skillGroups, type Experience } from "@/data/portfolio";
 
@@ -50,7 +51,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <HeroMascot />
+                <div className="hero-artwork">
+                  <HeroCodeBackground />
+                  <HeroMascot />
+                </div>
               </div>
               <div className="hero-foot">
                 <div className="hero-contact">

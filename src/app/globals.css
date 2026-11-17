@@ -70,6 +70,35 @@ html.portfolio {
 .portfolio .hero-phone { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
 .portfolio .scroll-link { color: #000; }
 
+/* Keep the typing inside the illustration column and outside the layout flow. */
+.portfolio .hero-artwork { position: relative; isolation: isolate; display: grid; justify-items: center; min-width: 0; }
+.portfolio .hero-code {
+  position: absolute;
+  inset-block-start: 42%;
+  inset-inline: -6% 0;
+  translate: 0 -50%;
+  margin: 0;
+  overflow: clip;
+  pointer-events: none;
+  user-select: none;
+  color: #3d544f;
+  opacity: .32;
+  filter: blur(1px);
+  font: 400 clamp(10px, 1.15vw, 15px)/1.9 'IBM Plex Mono', monospace;
+}
+.portfolio .hero-code code { font: inherit; }
+.portfolio .hero-code span { display: block; width: max-content; min-height: 1lh; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html.portfolio:not([data-motion="off"]) .hero-code span {
+    animation: hero-code-type 320ms steps(var(--characters), end) var(--typing-delay) both;
+  }
+}
+@keyframes hero-code-type {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0); }
+}
+
 /* Preserve the 2:3 artwork canvas: overlay positions are percentages of it. */
 .portfolio .hero-mascot { position: relative; width: min(100%, 400px, calc((100svh - 356px) * .666667)); justify-self: center; }
 .portfolio .mascot-art { position: relative; width: 100%; aspect-ratio: 2 / 3; }
@@ -314,6 +343,7 @@ html.portfolio {
   .portfolio .hero-main { display: flex; flex-direction: column; align-items: stretch; gap: 24px; }
   .portfolio .hero h1 { font-size: var(--t-h1); }
   .portfolio .hero .btn-row { width: 100%; }
+  .portfolio .hero-code { inset-inline: 0; font-size: clamp(10px, 2.9vw, 13px); }
   .portfolio .hero-mascot { width: min(64vw, 210px); margin-inline: auto; }
   .portfolio .hero-foot { margin-top: 16px; }
 }
