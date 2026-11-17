@@ -48,7 +48,14 @@ html.portfolio {
 .portfolio .mobile-navigation { display: none; }
 
 /* User-requested robot sits beside the editorial headline. */
-.portfolio .hero { height: auto; min-height: 100svh; padding: 0; background: #e5e5e5; }
+.portfolio .hero {
+  --hero-detail-enter-ms: 880;
+  --hero-detail-enter-ease: cubic-bezier(.25, .6, .35, 1);
+  height: auto;
+  min-height: 100svh;
+  padding: 0;
+  background: #e5e5e5;
+}
 .portfolio .hero-content { height: auto; min-height: 100svh; padding-top: 156px; padding-bottom: 32px; display: flex; flex-direction: column; gap: 0; }
 .portfolio .hero-composition { height: auto; min-height: 0; flex: 1; display: flex; flex-direction: column; gap: 0; }
 .portfolio .hero-intro { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 32px; }
@@ -69,6 +76,13 @@ html.portfolio {
 .portfolio .hero-contact p { min-height: 24px; }
 .portfolio .hero-phone { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
 .portfolio .scroll-link { color: #000; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html.portfolio.m-enter.m-enter-done:not([data-motion="off"]) .hero[data-enter]:not([data-enter="off"], .is-entering, .is-entered)
+    :is(.hero-name, .hero-bottom) {
+    transition: opacity calc(var(--hero-detail-enter-ms) * 1ms) var(--hero-detail-enter-ease);
+  }
+}
 
 /* Keep the typing inside the illustration column and outside the layout flow. */
 .portfolio .hero-artwork { position: relative; isolation: isolate; display: grid; justify-items: center; min-width: 0; }

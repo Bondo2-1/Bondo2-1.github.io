@@ -34,11 +34,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="modulepreload" href="/assets/taste/moments/moments.js" />
         <link rel="modulepreload" href="/assets/taste/moments/lib.js" />
         <link rel="modulepreload" href="/assets/taste/moments/word-highlight/moment.js" />
+        <link rel="modulepreload" href="/assets/taste/motion/motion.js" />
         <Script id="motion-guard" strategy="beforeInteractive">{`document.documentElement.classList.add('m-enter','mo-js');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700);setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500);`}</Script>
       </head>
       <body>
         {children}
-        <Script src="/assets/taste/motion/motion.js" type="module" strategy="afterInteractive" />
+        <Script src="/hero-entrance.js" type="module" strategy="afterInteractive" />
         <Script src="/assets/taste/moments/moments.js" type="module" strategy="afterInteractive" />
         <Script src="/navigation.js" strategy="afterInteractive" />
         <Script src="/hero-mascot.js" strategy="afterInteractive" />
