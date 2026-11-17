@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import { PauseIcon, PlayIcon } from "@phosphor-icons/react/ssr";
 
 const codeLines = [
   'import { queue } from "./queue";',
@@ -16,17 +16,14 @@ const codeLines = [
 
 export function HeroCodeBackground() {
   return (
-    <pre className="hero-code" aria-hidden="true">
-      <code>
-        {codeLines.map((line, index) => {
-          const style = {
-            "--characters": Math.max(1, line.length),
-            "--typing-delay": `${280 + index * 360}ms`,
-          } as CSSProperties;
-
-          return <span key={index} style={style}>{line}</span>;
-        })}
-      </code>
-    </pre>
+    <>
+      <pre className="hero-code" aria-hidden="true">
+        <code>{codeLines.map((line, index) => <span key={index}>{line}</span>)}</code>
+      </pre>
+      <button className="hero-code-toggle" type="button" aria-label="Pause background typing" aria-pressed="false" title="Pause background typing" hidden>
+        <PauseIcon className="hero-code-pause" size={16} weight="regular" aria-hidden="true" />
+        <PlayIcon className="hero-code-play" size={16} weight="regular" aria-hidden="true" />
+      </button>
+    </>
   );
 }

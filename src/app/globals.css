@@ -89,15 +89,23 @@ html.portfolio {
 .portfolio .hero-code code { font: inherit; }
 .portfolio .hero-code span { display: block; width: max-content; min-height: 1lh; }
 
-@media (prefers-reduced-motion: no-preference) {
-  html.portfolio:not([data-motion="off"]) .hero-code span {
-    animation: hero-code-type 320ms steps(var(--characters), end) var(--typing-delay) both;
-  }
+.portfolio .hero-code-toggle {
+  position: absolute;
+  inset: auto 0 0 auto;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #525b57;
+  cursor: pointer;
 }
-@keyframes hero-code-type {
-  from { clip-path: inset(0 100% 0 0); }
-  to { clip-path: inset(0); }
-}
+.portfolio .hero-code-toggle:not([hidden]) { display: grid; place-items: center; }
+.portfolio .hero-code-toggle:hover { background: rgb(0 0 0 / 5%); }
+.portfolio .hero-code-toggle:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+.portfolio .hero-code-toggle[aria-pressed="false"] .hero-code-play,
+.portfolio .hero-code-toggle[aria-pressed="true"] .hero-code-pause { display: none; }
 
 /* Preserve the 2:3 artwork canvas: overlay positions are percentages of it. */
 .portfolio .hero-mascot { position: relative; width: min(100%, 400px, calc((100svh - 356px) * .666667)); justify-self: center; }

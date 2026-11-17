@@ -42,6 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Script src="/assets/taste/moments/moments.js" type="module" strategy="afterInteractive" />
         <Script src="/navigation.js" strategy="afterInteractive" />
         <Script src="/hero-mascot.js" strategy="afterInteractive" />
+        <Script src="/hero-code.js" strategy="afterInteractive" />
         <Script src="/experience-art.js" strategy="afterInteractive" />
       </body>
     </html>
