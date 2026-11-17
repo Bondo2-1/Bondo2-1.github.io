@@ -11,8 +11,8 @@ import { about, bankComparison, experience, profile, projects, skillGroups, type
 
 const skillIcons = [FlowArrowIcon, CodeIcon, TerminalWindowIcon, DatabaseIcon, TerminalWindowIcon, TestTubeIcon];
 
-function Tags({ items, label = "Technologies" }: { items: string[]; label?: string }) {
-  return <ul className="tags" aria-label={label}>{items.map((item) => <li key={item}>{item}</li>)}</ul>;
+function Tags({ items }: { items: string[] }) {
+  return <ul className="tags" aria-label="Technologies">{items.map((item) => <li key={item}>{item}</li>)}</ul>;
 }
 
 function ExperienceRow({ job }: { job: Experience }) {
@@ -104,7 +104,7 @@ export default function Home() {
                   <p className="period">United Elite / Sales workflow</p>
                   <h3>{bankComparison.title}</h3>
                   <p className="job-summary">{bankComparison.description}</p>
-                  <Tags items={bankComparison.banks} label="Banks considered" />
+                  <p className="job-summary">{bankComparison.purpose}</p>
                 </div>
                 <Illustration id={bankComparison.illustration} />
               </article>

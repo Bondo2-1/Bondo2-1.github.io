@@ -100,10 +100,10 @@ export const experience: Experience[] = [
   },
 ];
 
-export const bankComparison: { title: string; description: string; banks: string[]; illustration: IllustrationId } = {
+export const bankComparison: { title: string; description: string; purpose: string; illustration: IllustrationId } = {
   title: "Bank comparison workflow",
   description: "A sales form compares bank options using a client's salary, nationality, company, current bank, and preferred interest point: minimum rate, maximum deferral, or both.",
-  banks: ["FAB", "DIB", "ENBD", "ADIB", "EIB"],
+  purpose: "The form helps newly hired sales staff identify the best bank for each client. It brings each bank’s eligibility rules together, so staff spend less time searching separate policy documents and can respond sooner. The goal is to reduce the risk of losing clients while they wait.",
   illustration: "sales-bank-comparison",
 };
 
