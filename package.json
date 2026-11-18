@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "assets:prepare": "node scripts/prepare-assets.mjs",
+    "assets:prepare": "node assets/prepare.mjs",
     "predev": "npm run assets:prepare",
     "dev": "next dev --hostname 127.0.0.1",
     "prebuild": "npm run assets:prepare",
     "build": "next build",
     "preview": "serve out --listen tcp://127.0.0.1:3000 --no-clipboard",
     "lint": "eslint . --max-warnings 0",
-    "typecheck": "tsc --noEmit",
-    "qa": "node scripts/check-design.mjs"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
@@ -20,9 +19,6 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@fontsource/anton": "^5.2.0",
-    "@fontsource-variable/inter": "^5.2.0",
-    "@fontsource/ibm-plex-mono": "^5.2.0",
     "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "^24.0.0",
     "@types/react": "^19.2.0",
@@ -34,5 +30,7 @@
     "tailwindcss": "^4.1.0",
     "typescript": "^5.9.0"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  }
 }

@@ -25,10 +25,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className="portfolio" data-type="service" data-radius="soft" data-buttons="solid" data-motion="" suppressHydrationWarning>
       <head>
-        {/* Raw skill motion CSS is shared with its browser checks; application styling stays in globals.css. */}
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link rel="stylesheet" href="/assets/taste/motion/motion.css" />
-        {/* Client-approved palette, Anton/Inter/IBM Plex Mono, editorial hero, pill nav, dark footer; word-highlight in About. */}
         <link rel="preload" href="/assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="modulepreload" href="/assets/taste/moments/moments.js" />

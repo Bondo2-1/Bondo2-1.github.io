@@ -1,4 +1,4 @@
-export type IllustrationId = "automation-systems" | "united-elite-operations" | "automation-card-player" | "sales-bank-comparison" | "sdn-container-support" | "hirehustle-ranking" | "commerce-api" | "about-docker-engineer";
+export type IllustrationId = "automation-card-player" | "sales-bank-comparison" | "sdn-container-support" | "hirehustle-ranking" | "commerce-api" | "about-docker-engineer";
 
 export interface Project {
   name: string;
@@ -120,8 +120,6 @@ export const illustrationAlt: Record<IllustrationId, string> = {
   "automation-card-player": "The same developer character holding cards, with ClickUp, Docker, and the new n8n logo on three floating cards.",
   "sales-bank-comparison": "A saleswoman using the client-details form while considering FAB, DIB, ENBD, ADIB, and EIB in a thought cloud.",
   "about-docker-engineer": "A standing 3D character with dark hair and headphones, wearing a Docker hoodie, jeans, and sneakers.",
-  "automation-systems": "Connected concrete processing modules, wooden input trays, and container blocks.",
-  "united-elite-operations": "A message routed through a concrete processor into financial-rule modules in a wooden tray.",
   "sdn-container-support": "The same developer seated at an office desk in a development-symbol hoodie, managing PostgreSQL production data, deploying Docker Swarm updates, and reading backend API logs.",
   "hirehustle-ranking": "Candidate documents passing through a matching mechanism into an ordered shortlist.",
   "commerce-api": "Product blocks, an authentication lock, order trays, and a payment module connected together.",
