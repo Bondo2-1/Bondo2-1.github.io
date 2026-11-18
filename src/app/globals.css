@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss" source("../");
 @import "../../assets/taste/system.css";
 @import "../../assets/taste/moments/word-highlight/moment.css";
 
